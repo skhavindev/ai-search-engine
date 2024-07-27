@@ -89,7 +89,6 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Streamlit app
 def main():
-    st.set_page_config(page_title="TextFusion.AI Search", layout="wide")
 
     # Load custom CSS
     try:
