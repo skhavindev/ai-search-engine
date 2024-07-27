@@ -1,0 +1,5 @@
+streamlit
+pydantic
+langchain-community
+langchain-core
+langchain-groq
