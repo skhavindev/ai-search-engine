@@ -4,6 +4,3 @@ primaryColor="#00fff9"
 secondaryBackgroundColor="#f5f5f5"
 textColor="#000000"
 font="monospace"
-
-TAVILY_API_KEY="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"
-GROQ_API_KEY="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"
