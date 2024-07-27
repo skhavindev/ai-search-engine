@@ -66,6 +66,25 @@ def remote_css(url):
 def icon(icon_name):
     st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
 
+
+
+with st.sidebar:
+        st.header("🪄")
+        st.subheader("*Made by TextFusion.AI✨*")
+        st.write("Copyright @ **TextFusion**")
+        st.write("[Instagram](https://instagram.com/textfusion.ai)")
+        st.write("if you have any issues ping us on instagram")
+        st.write("[Powered by mixtral-8x7b-32768]")
+
+#Main page TITLE and subheader
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 # Streamlit app
 def main():
     st.set_page_config(page_title="TextFusion.AI Search", layout="wide")
