@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-from fastapi import HTTPException
 from pydantic import BaseModel
 from langchain_community.retrievers import TavilySearchAPIRetriever
 from langchain_core.output_parsers import StrOutputParser
