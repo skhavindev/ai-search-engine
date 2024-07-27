@@ -47,7 +47,7 @@ class SearchEngine:
             response = self.chain.invoke({"question": query})
             return response
         except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+            return f"An error occurred: {str(e)}"
 
 class QueryRequest(BaseModel):
     question: str
@@ -71,7 +71,11 @@ def main():
     st.set_page_config(page_title="TextFusion.AI Search", layout="wide")
 
     # Load custom CSS
-    local_css("style.css")
+    try:
+        local_css("style.css")
+    except FileNotFoundError:
+        st.warning("style.css file not found. Using default styles.")
+
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
     st.title("TextFusion.AI Intelligent Search")
@@ -85,18 +89,21 @@ def main():
     TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-    search_engine = SearchEngine(
-        tavily_api_key=TAVILY_API_KEY,
-        groq_api_key=GROQ_API_KEY,
-        model_name="mixtral-8x7b-32768"
-    )
+    if not TAVILY_API_KEY or not GROQ_API_KEY:
+        st.error("API keys are missing. Please set TAVILY_API_KEY and GROQ_API_KEY environment variables.")
+    else:
+        search_engine = SearchEngine(
+            tavily_api_key=TAVILY_API_KEY,
+            groq_api_key=GROQ_API_KEY,
+            model_name="mixtral-8x7b-32768"
+        )
 
-    # Handle search query
-    if button_clicked and query != "Search...":
-        with st.spinner("Searching..."):
-            result = search_engine.search(query)
-        st.subheader(f"Search results for: '{query}'")
-        st.write(result)
+        # Handle search query
+        if button_clicked and query != "Search...":
+            with st.spinner("Searching..."):
+                result = search_engine.search(query)
+            st.subheader(f"Search results for: '{query}'")
+            st.write(result)
 
 if __name__ == "__main__":
     main()
