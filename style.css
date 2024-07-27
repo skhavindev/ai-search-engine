@@ -13,3 +13,7 @@ body {
 .stTextInput>div>div>input {
     color: #4F8BF9;
 }
+
+#GithubIcon {
+  visibility: hidden;
+}
