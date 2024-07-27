@@ -78,8 +78,7 @@ def main():
 
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
-    st.title("TextFusion.AI Intelligent Search")
-    st.write("✨")
+    st.title("TextFusion.AI Intelligent Search ✨")
 
     # Custom search bar
     icon("search")
