@@ -7,4 +7,6 @@ font="monospace"
 
 [global]
 hideStreamlitFooter = true
-GithubIcon = false
+[runner]
+toolbarMode = "minimal"
+
