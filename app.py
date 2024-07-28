@@ -67,6 +67,12 @@ def icon(icon_name):
     st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
 
 
+st.set_page_config(
+    page_title="AI Search Engine",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
 with st.sidebar:
         st.header("🪄")
