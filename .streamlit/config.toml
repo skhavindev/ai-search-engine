@@ -6,7 +6,7 @@ textColor="#000000"
 font="monospace"
 
 [global]
-layout = "wide"
+layout = "default"
 hideStreamlitFooter = true
 
 [runner]
