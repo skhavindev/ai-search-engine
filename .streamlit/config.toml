@@ -6,7 +6,9 @@ textColor="#000000"
 font="monospace"
 
 [global]
+layout = "wide"
 hideStreamlitFooter = true
+
 [runner]
 toolbarMode = "minimal"
 
