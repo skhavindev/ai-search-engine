@@ -7,6 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_groq import ChatGroq
 
+#APPPPP
 class SearchResult:
     def __init__(self, url: str, title: str, content: str):
         self.url = url
