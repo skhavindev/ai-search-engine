@@ -1,4 +1,4 @@
-# AI Search Engine - README
+# AI Search Engine V1 [Update: I am in the process of updating this to multi agentic system. This works but is inefficient than multi agentic systems]
 
 ## Overview
 
