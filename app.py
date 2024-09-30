@@ -99,11 +99,11 @@ def main():
 
     # Load custom CSS
     try:
-    local_css("styles.css")
+        local_css("styles.css")
     except FileNotFoundError:
-    st.error("CSS file not found!")
+        st.error("CSS file not found!")
     except Exception as e:
-    st.error(f"Error loading CSS: {e}")
+        st.error(f"Error loading CSS: {e}")
 
 
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
