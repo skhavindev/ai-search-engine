@@ -97,15 +97,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Streamlit app
 def main():
 
-    # Load custom CSS
-    try:
-        local_css("styles.css")
-    except FileNotFoundError:
-        st.error("CSS file not found!")
-    except Exception as e:
-        st.error(f"Error loading CSS: {e}")
-
-
+    local_css("styles.css")
     remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
     st.title("TextFusion.AI Intelligent Search ✨")
